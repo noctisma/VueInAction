@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Vue 示例</title>
+</head>
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+<body>
+<div id="app">
+    <a href="http:www.apple.com" @click="handleClick('禁止打开',$event)">打开链接</a>
+</div>
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            counter: 0
+        },
+        methods: {
+            handleClick: function (message, event) {
+                event.preventDefault();
+                window.alert(message);
+            }
+        }
+    })
+
+</script>
+</body>
+</html>

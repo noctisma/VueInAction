@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Vue 示例</title>
+</head>
+<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+
+<body>
+<div id="app">
+    <ul>
+        <li v-for="book in books">{{ book.name }}</li>
+    </ul>
+</div>
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            books: [
+                {name: '《Vue.js实战》'},
+                {name: '《JavaScript语言精粹》'},
+                {name: '《JavaScript高级程序设计》'}
+            ]
+        }
+    })
+
+</script>
+</body>
+</html>
